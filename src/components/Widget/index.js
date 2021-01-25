@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+//theme e importado de db.json
+
 const Widget = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
