@@ -50,4 +50,28 @@ Widget.Content = styled.div`
   }
 `;
 
-export default Widget;
+Widget.Button = styled.button`
+    border: none;
+    background: ${({theme}) => theme.colors.wrong};
+    width: 100%;
+    height: 38px;
+    font-weight: 700;
+    border-radius: ${({theme}) => theme.borderRadius};
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+`
+
+Widget.Input = styled.input`
+    background: transparent;
+    color: #fff;
+    padding: 15px;
+
+    width: 100%;
+    height: 38px;
+    border: 1px solid;
+    border-radius: ${({theme}) => theme.borderRadius};
+`
+
+
+export default Widget
