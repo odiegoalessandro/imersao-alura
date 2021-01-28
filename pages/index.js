@@ -9,6 +9,8 @@ import QuizContainer from '../src/components/QuizContainer'
 import QuizBackground from '../src/components/QuizBackground'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
+import Input from '../src/components/Input'
+import Button from '../src/components/Button'
 
 export default function Home() {
   const router = useRouter()
@@ -31,12 +33,8 @@ export default function Home() {
                 event.preventDefault()
                 router.push(`/quiz?name=${username}`)
               }}>
-                <Widget.Input placeholder="Digite seu nome" onChange={
-                  (event) => {
-                    setUsername(event.target.value)    
-                  }
-                } />
-                <Widget.Button type='submit' disabled={username.length === 0}>Jogar {username}</Widget.Button>
+                <Input placeholder="Digite seu nome" name="username" autoComplete="off" value={username} onChange={(event) => setUsername(event.target.value)} />
+                <Button type='submit' disabled={username.length === 0}>Jogar {username}</Button>
               </form>
             </Widget.Content>
           </Widget>
